@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Check for Duplicates</title>
+  </head>
+  <body>
+    <h2>Check for Duplicates in an Array</h2>
+    <p>Input Array: [1, 2, 3, 1]</p>
+    <button onclick="checkDuplicates([1, 2, 3, 1])">Check</button>
+    <p id="output1"></p>
+
+    <p>Input Array: [1, 2, 3, 4]</p>
+    <button onclick="checkDuplicates([1, 2, 3, 4])">Check</button>
+    <p id="output2"></p>
+
+    <script>
+      function checkDuplicates(arr) {
+        let hasDuplicates = new Set(arr).size !== arr.length;
+        let outputId =
+          arr.includes(1) && arr.includes(3) ? "output1" : "output2";
+        document.getElementById(outputId).innerText =
+          "Output: " + hasDuplicates;
+      }
+    </script>
+  </body>
+</html>

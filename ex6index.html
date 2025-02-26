@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sum Digits Until Single Digit</title>
+    <script>
+      function sumUntilSingleDigit() {
+        let num = parseInt(document.getElementById("num").value);
+        while (num >= 10) {
+          num = num
+            .toString()
+            .split("")
+            .reduce((sum, digit) => sum + parseInt(digit), 0);
+        }
+        document.getElementById("result").innerText = "Output: " + num;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Sum Digits Until a Single Digit</h2>
+    <input type="number" id="num" placeholder="Enter a number" />
+    <button onclick="sumUntilSingleDigit()">Compute</button>
+    <p id="result"></p>
+  </body>
+</html>

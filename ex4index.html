@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Remove Duplicates & Remove 3</title>
+  </head>
+  <body>
+    <h2>Remove Duplicate Items and Number 3 from a List</h2>
+    <p>Input Array: [3,2,2,3]</p>
+    <button onclick="processArray()">Process Array</button>
+    <p id="output"></p>
+
+    <script>
+      function processArray() {
+        let arr = [3, 2, 2, 3];
+        let uniqueArr = [...new Set(arr)].filter((num) => num !== 3);
+        document.getElementById("output").innerText =
+          "Processed Array: " + uniqueArr;
+      }
+    </script>
+  </body>
+</html>

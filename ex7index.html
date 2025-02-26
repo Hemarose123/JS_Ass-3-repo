@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Duplicate Zeros in Array</title>
+    <script>
+      function duplicateZeros() {
+        let arr = document.getElementById("array").value.split(",").map(Number);
+        let result = [];
+        for (let num of arr) {
+          result.push(num);
+          if (num === 0) result.push(0);
+        }
+        document.getElementById("result").innerText =
+          "Output: [" + result.slice(0, arr.length) + "]";
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Duplicate Each Occurrence of Zero</h2>
+    <input
+      type="text"
+      id="array"
+      placeholder="Enter numbers separated by comma"
+    />
+    <button onclick="duplicateZeros()">Compute</button>
+    <p id="result"></p>
+  </body>
+</html>

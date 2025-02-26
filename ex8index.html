@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Find Intersection of Two Arrays</title>
+    <script>
+      function findIntersection() {
+        let nums1 = document
+          .getElementById("nums1")
+          .value.split(",")
+          .map(Number);
+        let nums2 = document
+          .getElementById("nums2")
+          .value.split(",")
+          .map(Number);
+        let intersection = nums1.filter((num) => nums2.includes(num));
+        document.getElementById("result").innerText =
+          "Output: [" + [...new Set(intersection)] + "]";
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Find Intersection of Two Arrays</h2>
+    <input
+      type="text"
+      id="nums1"
+      placeholder="Enter first array (comma-separated)"
+    />
+    <input
+      type="text"
+      id="nums2"
+      placeholder="Enter second array (comma-separated)"
+    />
+    <button onclick="findIntersection()">Compute</button>
+    <p id="result"></p>
+  </body>
+</html>
